@@ -1,16 +1,9 @@
 import 'package:flet/flet.dart';
-
-import 'localization.dart';
-
+import "package:mylocalization/mylocalization.dart";
 CreateControlFactory createControl = (CreateControlArgs args) {
   switch (args.control.type) {
-    case "spinkit":
-      return SpinkitControl(
-        parent: args.parent,
-        control: args.control,
-      );
     default:
-      return null;
+      myLocalization();
   }
 };
 
