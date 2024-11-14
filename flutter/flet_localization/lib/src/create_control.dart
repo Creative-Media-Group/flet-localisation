@@ -3,7 +3,7 @@ import "package:mylocalization/mylocalization.dart";
 CreateControlFactory createControl = (CreateControlArgs args) {
   switch (args.control.type) {
     default:
-      myLocalization();
+      return myLocalization();
   }
 };
 
