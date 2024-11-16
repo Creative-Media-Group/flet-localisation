@@ -1,7 +1,7 @@
 [tool.poetry]
 name = "flet_localization"
 version = "0.1.0"
-description = ""
+description = "An addon for advanced localization."
 authors = ["tct123 <42028373+tct123@users.noreply.github.com>"]
 readme = "README.md"
 
