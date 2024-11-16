@@ -11,29 +11,27 @@ and the Flutter guide for
 [developing packages and plugins](https://flutter.dev/to/develop-packages).
 -->
 
-TODO: Put a short description of the package here that helps potential users
-know whether this package might be useful for them.
+An addon for advanced localization.
 
 ## Features
 
-- Flet localization
+- Flet advanced localization
 
 ## Getting started
 
-TODO: List prerequisites and provide or point to information on how to
-start using the package.
+In Python:
+```python
+import flet_localization as fl
+```
 
 ## Usage
 
-TODO: Include short and useful examples for package users. Add longer examples
-to `/example` folder.
-
-```dart
-const like = 'sample';
+I'm working on it.
+```python
+import flet_localization as fl
 ```
 
 ## Additional information
 
-TODO: Tell users more about the package: where to find more information, how to
-contribute to the package, how to file issues, what response they can expect
-from the package authors, and more.
+[mylocalization](https://github.com/Creative-Media-Group/mylocalization).
+Please be lenient(I'm still learning Flutter/Dart).

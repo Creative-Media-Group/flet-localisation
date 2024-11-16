@@ -1,7 +1,7 @@
 name: flet_localization
-description: "A new Flutter package project."
-version: 0.0.1
-homepage:
+description: An addon for advanced localization.
+version: 0.0.2
+homepage: https://creative-media-group.github.io/
 
 environment:
   sdk: ^3.5.4
