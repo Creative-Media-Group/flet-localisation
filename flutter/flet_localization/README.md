@@ -16,7 +16,7 @@ know whether this package might be useful for them.
 
 ## Features
 
-TODO: List what your package can do. Maybe include images, gifs, or videos.
+- Flet localization
 
 ## Getting started
 
