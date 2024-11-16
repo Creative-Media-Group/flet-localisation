@@ -1,6 +1,6 @@
 name: flet_localization
 description: An addon for advanced localization.
-version: 0.0.2
+version: 0.0.3
 homepage: https://creative-media-group.github.io/
 
 environment:
