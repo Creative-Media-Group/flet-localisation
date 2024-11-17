@@ -9,7 +9,7 @@ CreateControlFactory createControl = (CreateControlArgs args) {
       return mylocale;
   }
 };
-var mylocale = Text(MyLocalization().toString());
+var mylocale = MyLocalization().toString();
 void ensureInitialized() {
   // nothing to initialize
 }
