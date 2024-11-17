@@ -10,8 +10,8 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  flet: ^0.24.1
-  mylocalization: ^0.0.6
+  flet: any
+  mylocalization: any
 
 dev_dependencies:
   flutter_test:
