@@ -1,5 +1,6 @@
 import 'package:flet/flet.dart';
 import 'package:flutter/material.dart';
+import 'package:mylocalization/mylocalization.dart';
 
 class FletLocalisationControl extends StatelessWidget {
   final Control? parent;
@@ -13,9 +14,8 @@ class FletLocalisationControl extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    String text = control.attrString("value", "")!;
+    String text = control.attrString("value", "twiurqziqwwrewqr")!;
     Widget myControl = Text(text);
-
 
     return constrainedControl(context, myControl, parent, control);
   }

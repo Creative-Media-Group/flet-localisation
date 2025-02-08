@@ -1,7 +1,7 @@
 name: flet_localisation
 description: Flet FletLocalisation control
 repository: https://github.com/MyGithubAccount/flet-localisation/src/flutter/flet_localisation
-version: 0.1.0
+version: 0.3.0
 homepage: https://github.com/MyGithubAccount/flet-localisation
 
 environment:
@@ -12,6 +12,7 @@ dependencies:
   flet: 0.26.0
   flutter:
     sdk: flutter
+  mylocalization: ^0.0.8
 
 dev_dependencies:
   flutter_test:
