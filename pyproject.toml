@@ -5,7 +5,7 @@ description = "FletLocalisation control for Flet"
 readme = "README.md"
 requires-python = ">=3.9"
 authors = [
-    { name = "Flet contributors", email = "you@example.com" }
+    { name = "tct123", email = "42028373+tct123@users.noreply.github.com>" }
 ]
 dependencies = [
     "flet>=0.26.0",
