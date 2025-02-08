@@ -12,10 +12,10 @@ dependencies = [
 ]
 
 [project.urls]
-Homepage = "https://mydomain.dev"
-Documentation = "https://github.com/MyGithubAccount/flet-localisation"
-Repository = "https://github.com/MyGithubAccount/flet-localisation"
-Issues = "https://github.com/MyGithubAccount/flet-localisation/issues"
+Homepage = "https://github.com/Creative-Media-Group/flet_localisation"
+Documentation = "https://github.com/Creative-Media-Group/flet_localisation"
+Repository = "https://github.com/Creative-Media-Group/flet_localisation"
+Issues = "https://github.com/Creative-Media-Group/flet_localisation/issues"
 
 [tool.setuptools.package-data]
 "flutter.flet_localisation" = ["**/*"]
