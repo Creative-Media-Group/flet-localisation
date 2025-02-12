@@ -11,7 +11,8 @@ dependencies = [
   "flet-localisation",
   "flet>=0.26.0",
 ]
-
+[tool.flet.flutter]
+dependencies="flet_localisation"
 [tool.flet]
 # org name in reverse domain name notation, e.g. "com.mycompany".
 # Combined with project.name to build bundle ID for iOS and Android apps
