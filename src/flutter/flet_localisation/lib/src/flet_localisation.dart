@@ -14,9 +14,8 @@ class FletLocalisationControl extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    String text =
-        control.attrString("value", MyLocalization().getDeviceLocale()) ?? "";
+    Widget myControl = Text(MyLocalization().getDeviceLocale());
 
-    return Text(text); // only string as widget
+    return constrainedControl(context, myControl, parent, control);
   }
 }

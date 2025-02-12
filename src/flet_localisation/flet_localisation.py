@@ -1,34 +1,57 @@
+from enum import Enum
 from typing import Any, Optional
-from flet.core.control import Control, OptionalNumber
 
-class FletLocalisation(Control):
+from flet.core.constrained_control import ConstrainedControl
+from flet.core.control import OptionalNumber
+
+class FletLocalisation(ConstrainedControl):
     """
-    FletLocalisation Control, das nur String-Daten zurückgibt.
+    FletLocalisation Control.
     """
 
     def __init__(
         self,
-        value: Optional[str] = None,
-        tooltip: Optional[str] = None,
+        #
+        # Control
+        #
         opacity: OptionalNumber = None,
+        tooltip: Optional[str] = None,
         visible: Optional[bool] = None,
         data: Any = None,
+        #
+        # ConstrainedControl
+        #
+        left: OptionalNumber = None,
+        top: OptionalNumber = None,
+        right: OptionalNumber = None,
+        bottom: OptionalNumber = None,
+        #
+        # FletLocalisation specific
+        #
+        locale: Optional[str] = None,
     ):
-        super().__init__(
+        ConstrainedControl.__init__(
+            self,
             tooltip=tooltip,
             opacity=opacity,
             visible=visible,
             data=data,
+            left=left,
+            top=top,
+            right=right,
+            bottom=bottom,
         )
-        self.value = value
+
+        self.locale = locale
 
     def _get_control_name(self):
         return "flet_localisation"
 
+    # locale
     @property
-    def value(self) -> Optional[str]:
-        return self._get_attr("value", "")
+    def locale(self):
+        return self._get_attr("locale")
 
-    @value.setter
-    def value(self, value: Optional[str]):
-        self._set_attr("value", str(value) if value is not None else "")
+    @locale.setter
+    def locale(self, locale):
+        self._set_attr("locale", locale)
