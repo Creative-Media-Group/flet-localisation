@@ -1,36 +1,16 @@
 [project]
 name = "flet-localisation"
-version = "0.6.0"
-description = "FletLocalisation control for Flet"
-readme = "README.md"
-requires-python = ">=3.9"
+version = "0.8.0"
+description = ""
 authors = [
-    { name = "tct123", email = "42028373+tct123@users.noreply.github.com" }
+    { name = "tct123", email = "42028373+tct123@users.noreply.github.com" },
 ]
-dependencies = [
-    "flet>=0.26.0",
-]
+readme = "README.md"
+requires-python = ">=3.10"
+license = { file = "LICENSE" }
+dependencies = ["pyjnius"]
 
-[project.urls]
-Homepage = "https://github.com/Creative-Media-Group/flet_localisation"
-Documentation = "https://github.com/Creative-Media-Group/flet_localisation"
-Repository = "https://github.com/Creative-Media-Group/flet_localisation"
-Issues = "https://github.com/Creative-Media-Group/flet_localisation/issues"
-
-[tool.setuptools.package-data]
-"flutter.flet_localisation" = ["**/*"]
-
-[tool.uv]
-dev-dependencies = [
-    "flet[all]==0.26.0",
-]
-
-[tool.poetry.group.dev.dependencies]
-flet = {extras = ["all"], version = "0.26.0"}
-
-[tool.setuptools]
-license-files = ["LICENSE"]
 
 [build-system]
-requires = ["setuptools"]
-build-backend = "setuptools.build_meta"
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
