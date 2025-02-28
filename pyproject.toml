@@ -1,7 +1,7 @@
 [project]
 name = "flet-localisation"
 version = "0.8.0"
-description = ""
+description = "A library for a basic check of your localisation settings."
 authors = [
     { name = "tct123", email = "42028373+tct123@users.noreply.github.com" },
 ]
