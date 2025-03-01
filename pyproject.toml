@@ -14,7 +14,6 @@ dependencies = ["pyjnius"]
 repository = "https://github.com/Creative-Media-Group/flet_localisation"
 "Bug Tracker" = "https://github.com/Creative-Media-Group/flet_localisation/issues"
 
-
 [build-system]
 requires = ["poetry-core>=2.0.0,<3.0.0"]
 build-backend = "poetry.core.masonry.api"
