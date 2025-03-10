@@ -9,7 +9,22 @@ def locale(platform: str) -> str:
         Locale = autoclass("java.util.Locale")
         locale = Locale.getDefault()
         return f"{locale.getLanguage()}_{locale.getCountry()}"
+## ios
+elif platform == "ios":
+        try:
+            from pyobjus import autoclass
+            from pyobjus.dylib_manager import load_framework
 
+            load_framework("/System/Library/Frameworks/Foundation.framework")
+
+            NSLocale = autoclass("NSLocale")
+            preferred_langs = NSLocale.preferredLanguages()
+            primary_lang = preferred_langs.objectAtIndex_(0)
+
+            return primary_lang.replace("-", "_")
+        except Exception as e:
+            return f"Error fetching locale: {str(e)}"
+##ios end
     if platform == "linux" or platform == "macos" or platform == "windows":
         import locale as lc
 
