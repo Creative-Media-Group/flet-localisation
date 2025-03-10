@@ -3,14 +3,13 @@ def locale(platform: str) -> str:
     if "pageplatform." in platform:
         platform = platform.replace("pageplatform.", "")
     print(platform)
-    if platform == "android" or platform == "android_tv":
+    if platform in ["android", "android_tv"]:
         from jnius import autoclass
 
         Locale = autoclass("java.util.Locale")
         locale = Locale.getDefault()
         return f"{locale.getLanguage()}_{locale.getCountry()}"
-## ios
-elif platform == "ios":
+    elif platform == "ios":
         try:
             from pyobjus import autoclass
             from pyobjus.dylib_manager import load_framework
@@ -24,8 +23,7 @@ elif platform == "ios":
             return primary_lang.replace("-", "_")
         except Exception as e:
             return f"Error fetching locale: {str(e)}"
-##ios end
-    if platform == "linux" or platform == "macos" or platform == "windows":
+    if platform in ["linux", "macos", "windows"]:
         import locale as lc
 
         locale = lc.getlocale()[0]
