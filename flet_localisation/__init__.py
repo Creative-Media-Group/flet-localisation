@@ -1,7 +1,7 @@
 import flet as ft
 
 
-def locale(platform: str) -> str:
+def locale(platform: str, web: bool = False) -> str:
     platform = platform.lower()
     if "pageplatform." in platform:
         platform = platform.replace("pageplatform.", "")
@@ -31,5 +31,7 @@ def locale(platform: str) -> str:
 
         locale = lc.getlocale()[0]
         return locale
+    if ft.Page.web:
+        return f"{platform} not suported"  # locale=ft.Page().
     else:
         return f"{platform} not suported"
