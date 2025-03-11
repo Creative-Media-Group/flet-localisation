@@ -1,3 +1,6 @@
+import flet as ft
+
+
 def locale(platform: str) -> str:
     platform = platform.lower()
     if "pageplatform." in platform:
