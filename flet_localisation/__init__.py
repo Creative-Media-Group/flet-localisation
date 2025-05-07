@@ -15,15 +15,13 @@ def locale(platform: str, web: bool = False) -> str:
     elif platform == "ios":
         try:
             from pyobjus import autoclass
-            from pyobjus.dylib_manager import load_framework
+            from pyobjus.dylib_manager import load_framework, INCLUDE
 
-            load_framework("/System/Library/Frameworks/Foundation.framework")
-
+            load_framework(INCLUDE.Foundation)
             NSLocale = autoclass("NSLocale")
-            preferred_langs = NSLocale.preferredLanguages()
-            primary_lang = preferred_langs.objectAtIndex_(0)
-
-            return primary_lang.replace("-", "_")
+            current_locale = NSLocale.currentLocale().localeIdentifier()
+            preferred_languages = NSLocale.preferredLanguages()
+            return current_locale
         except Exception as e:
             return f"Error fetching locale: {str(e)}"
     if platform in ["linux", "macos", "windows"]:
