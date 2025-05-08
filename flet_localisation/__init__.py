@@ -5,7 +5,7 @@ def locale(platform: str, web: bool = False) -> str:
     platform = platform.lower()
     if "pageplatform." in platform:
         platform = platform.replace("pageplatform.", "")
-    print(platform)
+    # print(platform)
     if platform in ["android", "android_tv"]:
         from jnius import autoclass
 
